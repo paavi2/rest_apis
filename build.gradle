@@ -10,12 +10,12 @@ repositories {
 }
 
 dependencies {
-    implementation("com.github.java-json-tools:json-schema-validator:2.2.14")
-    implementation("com.fasterxml.jackson.core:jackson-databind:2.20.0")
-    implementation("org.projectlombok:lombok:1.18.38")
-    implementation("io.rest-assured:rest-assured:5.5.6")
-    implementation("io.rest-assured:json-schema-validator:5.5.6")
-    implementation("org.testng:testng:7.11.0")
+    implementation("com.fasterxml.jackson.core:jackson-databind:2.20.0") //Needed for serialization(java to json) and desiserialize(json to java)
+    implementation("org.projectlombok:lombok:1.18.38") // to minimalize the code snippet, getter, setter, default constructors
+    implementation("io.rest-assured:rest-assured:5.5.6") // Needed to send request and get response from backend
+    implementation("io.rest-assured:json-schema-validator:5.5.6") //Needed to validate json schema in api response
+    implementation("org.testng:testng:7.11.0") // Needed for using TestNG annotations, listeners, assertions, data providers
+    implementation("com.mysql:mysql-connector-j:9.4.0") //Needed to connect with MySQL DB
 }
 
 test {
